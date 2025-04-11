@@ -32,7 +32,7 @@ function getCurrentFunctionName() {
  *   getFunctionBody(hiHello) => "function hiHello() { console.log('hello world'); }"
  *
  */
-function getFunctionBody(/* func */) {
+function getFunctionBody(/* funcs */) {
   throw new Error('Not implemented');
 }
 
@@ -50,8 +50,14 @@ function getFunctionBody(/* func */) {
  *  ]) => [0, 1, 2]
  *
  */
-function getArgumentsCount(/* funcs */) {
-  throw new Error('Not implemented');
+function getArgumentsCount(funcs) {
+  const ar = [];
+  let foo;
+  funcs.forEach((f) => {
+    foo = f;
+    ar.push(foo.length);
+  });
+  return ar;
 }
 
 /**
